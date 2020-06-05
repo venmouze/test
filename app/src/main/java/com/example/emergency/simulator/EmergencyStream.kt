@@ -18,10 +18,10 @@ class EmergencyStream {
         observable.repeatWhen { o: Observable<Any?> ->
             o.concatMap<Any?> { v: Any? ->
                 Observable.timer(
-                    Random.nextLong(30,60),
+                    Random.nextLong(30,90),
                     TimeUnit.SECONDS
                 )
             }
-        }.delay(Random.nextLong(30,60), TimeUnit.SECONDS).subscribe(emergencyStream)
+        }.delay(Random.nextLong(30,90), TimeUnit.SECONDS).subscribe(emergencyStream)
     }
 }
