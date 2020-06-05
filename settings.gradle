@@ -1,0 +1,2 @@
+rootProject.name='EvacuationEmergency'
+include ':app'
