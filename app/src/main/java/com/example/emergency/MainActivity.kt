@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
             val employeesBrown = observable?.flatMapIterable { employeesData -> employeesData.data }
                 ?.filter { employee -> employee.employee_age > "60" }
 
-            employeesYellow?.subscribe { value -> value}
-            employeesBlue?.subscribe { value -> value }
-            employeesBrown?.subscribe { value -> value}
+            employeesYellow?.subscribe { value -> println("FT_VALUE_YELLOW: ${value}")}
+            employeesBlue?.subscribe { value -> println("FT_VALUEB_BLUE: ${value}")}
+            employeesBrown?.subscribe { value -> println("FT_VALUE_BROWN: ${value}")}
         }
     }
 }
